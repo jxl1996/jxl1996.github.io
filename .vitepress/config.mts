@@ -43,6 +43,15 @@ export default defineConfig({
                         {text: 'demo1', link: '/PostgreSQL/demo1.md'}
                     ]
                 }
+            ],
+            '/Golang-Interview/': [
+                {
+                    text: 'Golang面试',
+                    items: [
+                        {text: '口述题', link: '/Golang-Interview/Golang-Interview.md'},
+                        {text: '交替打印奇偶数', link: '/Golang-Interview/交替打印奇偶数.md'}
+                    ]
+                }
             ]
         },
 

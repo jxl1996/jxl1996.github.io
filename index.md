@@ -20,6 +20,6 @@ features:
     
   - title: Golang面试
     link: Golang-Interview/Golang-Interview.md
-  - title: Feature B
+
 ---
 
