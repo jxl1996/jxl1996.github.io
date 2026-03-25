@@ -44,12 +44,12 @@ export default defineConfig({
                     ]
                 }
             ],
-            '/Golang-Interview/': [
+            '/Interview/': [
                 {
-                    text: 'Golang面试',
+                    text: '面试',
                     items: [
-                        {text: '口述题', link: '/Golang-Interview/Golang-Interview.md'},
-                        {text: '交替打印奇偶数', link: '/Golang-Interview/交替打印奇偶数.md'}
+                        {text: '口述题', link: '/Interview/Interview.md'},
+                        {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'}
                     ]
                 }
             ]
