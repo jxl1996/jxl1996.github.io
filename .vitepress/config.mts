@@ -49,7 +49,8 @@ export default defineConfig({
                     text: '面试',
                     items: [
                         {text: '口述题', link: '/Interview/Interview.md'},
-                        {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'}
+                        {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'},
+                        {text: '手撕协程池', link: '/Interview/手撕协程池.md'},
                     ]
                 }
             ]
