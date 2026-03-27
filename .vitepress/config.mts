@@ -51,6 +51,7 @@ export default defineConfig({
                         {text: '口述题', link: '/Interview/Interview.md'},
                         {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'},
                         {text: '手撕协程池', link: '/Interview/手撕协程池.md'},
+                        {text: '奇安信秋招Golang方向试卷3', link: '/Interview/奇安信秋招Golang方向试卷3.md'},
                     ]
                 }
             ]
