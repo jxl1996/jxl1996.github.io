@@ -344,6 +344,29 @@ Go 语言本质上**只有值传递**，不存在传统意义上的引用传递�
 + 数据结构的大小: 数据结构较大 → 用指针（避免拷贝）, 小对象 / 基本类型 → 直接传值
 + lice、map、channel 本身是引用语义，直接传即可
 
+---
+
+## channel的panic
+
+面试题: channel做那些操作的话会panic? 
+
+核心：导致 Panic 的 3 类操作
+
+1. 关闭 (Close) 相关的 Panic
+
+- **重复关闭：** 对一个已经关闭的 `channel` 再次执行 `close(ch)`。
+- **关闭 nil：** 对一个未初始化的 `channel`（即 `var ch chan int`，值为 `nil`）执行 `close(ch)`。
+
+2. 发送 (Send) 相关的 Panic
+
+- **向已关闭的 channel 发送：** `ch := make(chan int); close(ch); ch <- 1`。
+
+3. 特殊非法操作
+
+- **向 nil channel 发送数据：** 这种情况下并不会直接 panic，而是会**永久阻塞**（Deadlock），如果主协程因此卡死，程序会崩溃退出。但在严格意义上的“操作触发 Panic”中，主要是上述三条。
+
+---
+
 
 
 
