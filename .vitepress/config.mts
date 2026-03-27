@@ -56,6 +56,7 @@ export default defineConfig({
                     items: [
                         {text: 'Golang', link: '/Interview/Golang-Interview.md'},
                         {text: 'Redis', link: '/Interview/Redis-Interview.md'},
+                        {text: 'Mysql', link: '/Interview/Mysql-Interview.md'},
                         {text: 'Git', link: '/Interview/Git-Interview.md'},
                         {text: '秒杀系统设计', link: '/Interview/秒杀系统设计.md'},
                         {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'},
