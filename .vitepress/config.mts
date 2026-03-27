@@ -2,6 +2,12 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    vite: {
+        server: {
+            port: 9527, // 你想要的端口
+            host: '0.0.0.0' // 可选：允许局域网访问
+        }
+    },
     base: "/",
     title: "Siriabc",
     description: "A VitePress Site",
