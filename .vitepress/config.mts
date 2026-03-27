@@ -55,6 +55,7 @@ export default defineConfig({
                     text: '面试',
                     items: [
                         {text: 'Golang', link: '/Interview/Golang-Interview.md'},
+                        {text: 'Git', link: '/Interview/Git-Interview.md'},
                         {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'},
                         {text: '手撕协程池', link: '/Interview/手撕协程池.md'},
                         {text: '奇安信秋招Golang方向试卷3', link: '/Interview/奇安信秋招Golang方向试卷3.md'},
