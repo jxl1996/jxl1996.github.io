@@ -66,6 +66,14 @@ export default defineConfig({
                         {text: '参会的策略', link: '/Interview/参会的策略.md'},
                     ]
                 }
+            ],
+            '/SortAlgorithm/':[
+                {
+                    text:"排序算法",
+                    items:[
+                        {text: '冒泡排序', link: '/SortAlgorithm/01_bubble_sort.md'},
+                    ]
+                }
             ]
         },
 

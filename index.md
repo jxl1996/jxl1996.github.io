@@ -17,9 +17,10 @@ hero:
 features:
   - title: PostgreSQL
     link: /PostgreSQL/pgsql20260208.md
-    
+
   - title: 面试
-    link: Interview/Golang-Interview.md
+    link: /Interview/Golang-Interview.md
 
+  - title: 排序算法
+    link: /SortAlgorithm/01_bubble_sort.md
 ---
-
