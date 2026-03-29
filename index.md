@@ -23,4 +23,8 @@ features:
 
   - title: 排序算法
     link: /SortAlgorithm/01_bubble_sort.md
+
+  - title: UniApp
+    link: /UniApp/unplugin-auto-import.md
+
 ---

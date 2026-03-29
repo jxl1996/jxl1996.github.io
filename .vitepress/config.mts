@@ -74,6 +74,14 @@ export default defineConfig({
                         {text: '冒泡排序', link: '/SortAlgorithm/01_bubble_sort.md'},
                     ]
                 }
+            ],
+            '/UniApp/':[
+                {
+                    text:"UniApp",
+                    items:[
+                        {text: 'unplugin-auto-import插件', link: '/UniApp/unplugin-auto-import.md'},
+                    ]
+                }
             ]
         },
 
