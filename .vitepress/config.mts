@@ -82,6 +82,14 @@ export default defineConfig({
                         {text: 'unplugin-auto-import插件', link: '/UniApp/unplugin-auto-import.md'},
                     ]
                 }
+            ],
+            '/VPS/':[
+                {
+                    text:"VPS",
+                    items:[
+                        {text: 'VPS搭建', link: '/VPS/vps_build.md'},
+                    ]
+                }
             ]
         },
 

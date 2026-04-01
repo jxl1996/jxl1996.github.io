@@ -27,4 +27,7 @@ features:
   - title: UniApp
     link: /UniApp/unplugin-auto-import.md
 
+  - title: VPS
+    link: /VPS/vps_build.md
+
 ---
