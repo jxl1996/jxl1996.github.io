@@ -120,8 +120,18 @@ lsmod | grep bbr
 
 #### 主流搭配方式
 
-+ **Vless + XHTTP + Reality**
-  + 
++ 搭配方式1：**Vless + XHTTP + Reality**
+  + 协议：vless
+  + 传输：XHTTP
+  + 路径：/随机数字字母
+  + 安全：Reality
+    + Target和Sni： 没被墙的网站，如：`microsoft.com`、`apple.com`等
+    + `Get New Cert` 创建公钥和私钥
 
-
++ 搭配方式2：**Vless + TCP+ Reality**
+  + 协议：vless
+  + 传输：TCP
+  + 安全：Reality
+    + Target和Sni： 没被墙的网站，如：`microsoft.com`、`apple.com`等
+    + `Get New Cert` 创建公钥和私钥
 
