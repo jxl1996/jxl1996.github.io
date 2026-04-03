@@ -25,7 +25,7 @@ yum update -y && yum install curl wget -y
 ```
 
 ```bash [Ubuntu / Debian]
-apt update && apt install curl wget -y
+apt update -y && apt upgrade -y && apt install sudo curl -y
 ```
 
 :::
@@ -118,7 +118,7 @@ lsmod | grep bbr
 
 ### 三、搭建节点
 
-#### 主流搭配方式
+#### 3.1 不带域名搭建节点
 
 + 搭配方式1：**Vless + XHTTP + Reality**
   + 协议：vless
@@ -134,4 +134,36 @@ lsmod | grep bbr
   + 安全：Reality
     + Target和Sni： 没被墙的网站，如：`microsoft.com`、`apple.com`等
     + `Get New Cert` 创建公钥和私钥
+
+
+
+#### 3.2 使用域名搭建节点
+
+使用域名搭建节点的好处：
+
++ 避免IP地址泄漏
++ 可搭建更多种类的节点
++ 可以套CDN给节点提速
+
+> [!NOTE]
+>
+> 准备条件：
+>
+> + 购买低价域名：https://www.namesilo.com/
+> + 将域名托管到cloudflare平台：https://cloudflare.com
+> + 在cloudflare平台 将域名解析到VPS服务器， 配置DNS记录的时候`代理状态选择开启`
+>   + 测试：ping 自定义域名，能够正常获取数据，并且IP显示的CDN服务器的IP , 而不是VPS服务器的IP，说明设置成功。
+> + 使用3X-UI面板安装SSL证书
+
+
+
+搭配方式：**Vmess + WS  + TLS**
+
++ 协议：vmess
++ 端口：TLS节点建议端口：443、2053、2083、2087、2096、8443
++ 传输：Websocket
++ 主机：填写自己的域名
++ 路径：/随机数字字母
++ 安全：TLS
++ 公钥+私钥： 选择`从面板设置证书`
 

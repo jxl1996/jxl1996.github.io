@@ -87,7 +87,7 @@ export default defineConfig({
                 {
                     text:"VPS",
                     items:[
-                        {text: 'VPS搭建', link: '/VPS/vps_build.md'},
+                        {text: 'VPS搭建', link: '/VPS/vps_build.md'}
                     ]
                 }
             ]
