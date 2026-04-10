@@ -99,6 +99,14 @@ export default defineConfig({
                         {text: 'Github SSH协议配置', link: '/Git/github-ssh.md'}
                     ]
                 }
+            ],
+            '/Frontend/':[
+                {
+                    text:"前端",
+                    items:[
+                        {text: '防抖和节流', link: '/Frontend/debounce-throttle.md'}
+                    ]
+                }
             ]
         },
 
