@@ -107,6 +107,14 @@ export default defineConfig({
                         {text: '防抖和节流', link: '/Frontend/debounce-throttle.md'}
                     ]
                 }
+            ],
+            "/Golang/":[
+                {
+                    text:"Golang",
+                    items:[
+                        {text: 'GORM唯一约束表的插入修改', link: '/Golang/Gorm-Unique-Constraint.md'}
+                    ]
+                }
             ]
         },
 
