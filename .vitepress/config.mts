@@ -3,11 +3,11 @@ import {defineConfig} from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     head: [
-        // 假设 Algolia 给你的验证标签是这样的
-        // ['meta', { name: 'algolia-site-verification', content: 'BC07CB2534C4E288' }],
-        // 或者他们要求添加爬虫允许的标志
-        // ['meta', { name: 'robots', content: 'index, follow' }]
+        ['meta', {name: 'algolia-site-verification', content: 'BC07CB2534C4E288'}],
     ],
+    sitemap: {
+        hostname: 'https://jxl1996.github.io',
+    },
     vite: {
         server: {
             port: 9527, // 你想要的端口
@@ -80,50 +80,50 @@ export default defineConfig({
                     ]
                 }
             ],
-            '/SortAlgorithm/':[
+            '/SortAlgorithm/': [
                 {
-                    text:"排序算法",
-                    items:[
+                    text: "排序算法",
+                    items: [
                         {text: '冒泡排序', link: '/SortAlgorithm/01_bubble_sort.md'},
                     ]
                 }
             ],
-            '/UniApp/':[
+            '/UniApp/': [
                 {
-                    text:"UniApp",
-                    items:[
+                    text: "UniApp",
+                    items: [
                         {text: 'unplugin-auto-import插件', link: '/UniApp/unplugin-auto-import.md'},
                     ]
                 }
             ],
-            '/VPS/':[
+            '/VPS/': [
                 {
-                    text:"VPS",
-                    items:[
+                    text: "VPS",
+                    items: [
                         {text: 'VPS搭建', link: '/VPS/vps_build.md'}
                     ]
                 }
             ],
-            '/Git/':[
+            '/Git/': [
                 {
-                    text:"Git",
-                    items:[
+                    text: "Git",
+                    items: [
                         {text: 'Github SSH协议配置', link: '/Git/github-ssh.md'}
                     ]
                 }
             ],
-            '/Frontend/':[
+            '/Frontend/': [
                 {
-                    text:"前端",
-                    items:[
+                    text: "前端",
+                    items: [
                         {text: '防抖和节流', link: '/Frontend/debounce-throttle.md'}
                     ]
                 }
             ],
-            "/Golang/":[
+            "/Golang/": [
                 {
-                    text:"Golang",
-                    items:[
+                    text: "Golang",
+                    items: [
                         {text: 'GORM唯一约束表的插入修改', link: '/Golang/Gorm-Unique-Constraint.md'}
                     ]
                 }
