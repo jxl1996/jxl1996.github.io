@@ -31,6 +31,6 @@ features:
     link: /VPS/vps_build.md
 
   - title: Git
-    link: /Git/ssh.md
+    link: /Git/github-ssh.md
 
 ---

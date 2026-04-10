@@ -96,7 +96,7 @@ export default defineConfig({
                 {
                     text:"Git",
                     items:[
-                        {text: 'Github SSH协议配置', link: '/Git/ssh.md'}
+                        {text: 'Github SSH协议配置', link: '/Git/github-ssh.md'}
                     ]
                 }
             ]
