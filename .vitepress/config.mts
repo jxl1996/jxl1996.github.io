@@ -4,7 +4,7 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     head: [
         // 假设 Algolia 给你的验证标签是这样的
-        ['meta', { name: 'algolia-site-verification', content: 'BC07CB2534C4E288' }],
+        // ['meta', { name: 'algolia-site-verification', content: 'BC07CB2534C4E288' }],
         // 或者他们要求添加爬虫允许的标志
         // ['meta', { name: 'robots', content: 'index, follow' }]
     ],
