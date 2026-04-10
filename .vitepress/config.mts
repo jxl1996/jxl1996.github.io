@@ -2,6 +2,12 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+    head: [
+        // 假设 Algolia 给你的验证标签是这样的
+        ['meta', { name: 'algolia-site-verification', content: 'BC07CB2534C4E288' }],
+        // 或者他们要求添加爬虫允许的标志
+        // ['meta', { name: 'robots', content: 'index, follow' }]
+    ],
     vite: {
         server: {
             port: 9527, // 你想要的端口
@@ -28,7 +34,13 @@ export default defineConfig({
         },
 
         search: {
-            provider: 'local'
+            // provider: 'local',
+            provider: 'algolia',
+            options: {
+                appId: '5YLNL59X0S',
+                apiKey: 'b4bde6dd5a880111cf435577f7c40ce0',
+                indexName: 'code note'
+            }
         },
 
 
