@@ -30,4 +30,7 @@ features:
   - title: VPS
     link: /VPS/vps_build.md
 
+  - title: Git
+    link: /Git/ssh.md
+
 ---

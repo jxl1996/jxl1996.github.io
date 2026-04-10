@@ -91,6 +91,14 @@ export default defineConfig({
                         {text: 'VPS搭建', link: '/VPS/vps_build.md'}
                     ]
                 }
+            ],
+            '/Git/':[
+                {
+                    text:"Git",
+                    items:[
+                        {text: 'Github SSH协议配置', link: '/Git/ssh.md'}
+                    ]
+                }
             ]
         },
 
