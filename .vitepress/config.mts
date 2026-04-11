@@ -88,14 +88,14 @@ export default defineConfig({
                     ]
                 }
             ],
-            '/UniApp/': [
-                {
-                    text: "UniApp",
-                    items: [
-                        {text: 'unplugin-auto-import插件', link: '/UniApp/unplugin-auto-import.md'},
-                    ]
-                }
-            ],
+            // '/UniApp/': [
+            //     {
+            //         text: "UniApp",
+            //         items: [
+            //             {text: 'UniApp中对pinia数据持久化', link: '/UniApp/pinia-plugin-persistedstate.md'},
+            //         ]
+            //     }
+            // ],
             '/VPS/': [
                 {
                     text: "VPS",
