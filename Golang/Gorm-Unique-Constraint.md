@@ -34,7 +34,7 @@ func demo01() {
 		BagId:  100,
 		Stock:  5,
 	}
-	createRes := db().Clauses(clause.OnConflict{
+	createRes := db().Session(&gorm.Session{}).Clauses(clause.OnConflict{
 		Columns:   []clause.Column{{Name: "user_id"}, {Name: "bag_id"}},
 		DoNothing: true,
 	}).Create(&userbags2)
@@ -109,7 +109,7 @@ func demo02() {
 		Stock:  5, // 这是不存在时的初始值
 	}
 
-	err := db().Clauses(clause.OnConflict{
+	err := db().Session(&gorm.Session{}).Clauses(clause.OnConflict{
 		// 1. 指定冲突的约束列（通常是你的唯一索引字段）
 		Columns: []clause.Column{{Name: "user_id"}, {Name: "bag_id"}},
 
