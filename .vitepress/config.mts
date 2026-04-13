@@ -34,15 +34,8 @@ export default defineConfig({
         },
 
         search: {
-            // provider: 'local',
-            provider: 'algolia',
-            options: {
-                appId: '5YLNL59X0S',
-                apiKey: 'b4bde6dd5a880111cf435577f7c40ce0',
-                indexName: 'code note'
-            }
+            provider: 'local',
         },
-
 
         nav: [
             {text: 'Home', link: '/'},
