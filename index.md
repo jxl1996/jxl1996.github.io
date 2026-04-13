@@ -38,4 +38,7 @@ features:
 
   - title: Golang
     link: /Golang/Gorm-Unique-Constraint.md
+
+  - title: Claude
+    link: /Claude/claudecode-install.md
 ---

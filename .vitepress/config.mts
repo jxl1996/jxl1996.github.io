@@ -128,6 +128,14 @@ export default defineConfig({
                         {text: 'GORM唯一约束表的插入修改', link: '/Golang/Gorm-Unique-Constraint.md'}
                     ]
                 }
+            ],
+            "/Claude/": [
+                {
+                    text: "Claude",
+                    items: [
+                        {text: 'Claude Code安装', link: '/Claude/claudecode-install.md'}
+                    ]
+                }
             ]
         },
 
