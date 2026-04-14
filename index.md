@@ -41,4 +41,7 @@ features:
 
   - title: Claude
     link: /Claude/claudecode-install.md
+
+  - title: ElasticSearch
+    link: /ElasticSearch/es_install.md
 ---

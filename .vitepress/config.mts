@@ -129,6 +129,14 @@ export default defineConfig({
                         {text: 'Claude Code安装', link: '/Claude/claudecode-install.md'}
                     ]
                 }
+            ],
+            "/ElasticSearch/": [
+                {
+                    text: "ElasticSearch",
+                    items: [
+                        {text: '安装', link: '/ElasticSearch/es_install.md'}
+                    ]
+                }
             ]
         },
 
