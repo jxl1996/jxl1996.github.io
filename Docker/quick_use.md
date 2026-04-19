@@ -60,6 +60,8 @@ docker rmi image_id
 
 ## 三、容器
 
+### 3.1 容器基础操作
+
 ```bash
 # 查看正在运行的容器
 docker ps
@@ -89,12 +91,80 @@ docker rm -f 容器ID
 
 ```bash
 # 配置数据库名和root密码
-docker run -d --name blogmysql 3311:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=blog mysql:5.7
+docker run -d --name blogmysql -p 3311:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=blog mysql:5.7
 
 # 数据挂载
 docker run -d --name blogmysql2 -p 3312:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=blog -v ./mysqldata:/var/lib/mysql mysql:5.7
 
 ```
+
+容器操作：
+
+```bash
+# 停止容器
+docker stop 容器ID
+
+# 启动容器
+docker start 容器ID
+
+# 重启容器
+docker restart 容器ID
+
+# 删除没在运行的容器
+docker rm 容器ID
+
+# 删除正在运行的容器
+docker rm -f 容器ID
+
+# 停止所有容器
+docker stop $(docker ps -aq)
+
+# 删除所有容器
+docker rm -f $(docker ps -aq)
+
+```
+
+查看日志：
+
+```bash
+docker logs 容器ID
+docker logs -f -n 10 b374928422fb
+```
+
+
+
+进入容器：
+
+```bash
+docker exec -it b374928422fb bash
+docker exec -it b374928422fb ls
+```
+
+
+
+### 3.2 案例
+
+```bash
+[root@localhost ~]# docker run -d -p 3306:3306 mysql:5.7
+44548915427cf7401179ae01cb170923953b8c81fd05d237fb119a9b5bdfcfa3
+[root@localhost ~]# docker ps -a
+CONTAINER ID   IMAGE       COMMAND                   CREATED         STATUS                     PORTS     NAMES
+44548915427c   mysql:5.7   "docker-entrypoint.s…"   4 seconds ago   Exited (1) 3 seconds ago             magical_haibt
+```
+
+为什么mysql容器启动就马上停止了？？？
+
+可以查看容器日志：
+
+```
+2026-04-19 10:39:52+00:00 [ERROR] [Entrypoint]: Database is uninitialized and password option is not specified
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+```
+
+得知：上面的环境变量必须设置其中1个
 
 
 
