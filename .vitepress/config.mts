@@ -139,7 +139,13 @@ export default defineConfig({
                         {text: '密码配置', link: '/ElasticSearch/es_security.md'}
                     ]
                 }
-            ]
+            ],
+            "/Docker/":{
+                text: "Docker",
+                items: [
+                    {text: 'Docker安装', link: '/Docker/install.md'},
+                ]
+            }
         },
 
         // socialLinks: [
