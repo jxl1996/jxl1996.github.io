@@ -60,9 +60,41 @@ docker rmi image_id
 
 ## 三、容器
 
+```bash
+# 查看正在运行的容器
+docker ps
 
+# 停止容器
+docker stop mysql
 
+# 查看所有容器
+docker ps -a
 
+# 查看所有容器,并且只获取ID
+docker ps -aq
+
+# 指定格式输出
+docker ps -a --format="table {{.ID}}\t{{.Names}}"
+
+# 一键删除所有已停止的容器
+docker container prune -f
+
+# 删除容器
+docker rm 容器ID
+# 强行删除正在运行的容器
+docker rm -f 容器ID
+```
+
+容器运行：
+
+```bash
+# 配置数据库名和root密码
+docker run -d --name blogmysql 3311:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=blog mysql:5.7
+
+# 数据挂载
+docker run -d --name blogmysql2 -p 3312:3306 -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=blog -v ./mysqldata:/var/lib/mysql mysql:5.7
+
+```
 
 
 
