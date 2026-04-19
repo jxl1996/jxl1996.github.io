@@ -1,6 +1,6 @@
 # Claude Code 安装
 
-## 1. Claude Code 安装（CLI ）
+## 1. Claude Code 安装
 
 > [!NOTE]
 >
@@ -23,6 +23,3 @@ claude --version
 
 
 
-## 2. 安装cc-switch
-
-https://github.com/farion1231/cc-switch/releases
