@@ -126,8 +126,8 @@ export default defineConfig({
                 {
                     text: "Claude",
                     items: [
-                        {text: 'Claude Code安装', link: '/Claude/ClaudeCode-install.md'},
-                        {text: 'CLIProxyAPI', link: '/Claude/CLIProxyAPI.md'},
+                        {text: 'Claude Code安装', link: '/Claude/claudecode-install.md'},
+                        {text: 'CLIProxyAPI', link: '/Claude/cliproxyapi.md'},
                     ]
                 }
             ],

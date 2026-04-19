@@ -40,7 +40,7 @@ features:
     link: /Golang/Gorm-Unique-Constraint.md
 
   - title: Claude
-    link: /Claude/ClaudeCode-install.md
+    link: /Claude/claudecode-install.md
 
   - title: ElasticSearch
     link: /ElasticSearch/es_install.md
