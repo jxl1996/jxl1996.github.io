@@ -22,7 +22,7 @@ remote-management:
 
 ```
 
-访问管理中心：
+访问管理中心：`http://localhost:8317/management.html`
 
 
 
@@ -31,7 +31,7 @@ remote-management:
 | 变量名                         | 值                     | 说明                     |
 | ------------------------------ | ---------------------- | ------------------------ |
 | ANTHROPIC_AUTH_TOKEN           | apikey                 | 认证标识（固定值）       |
-| ANTHROPIC_BASE_URL             |  | CLIProxyAPI 本地服务地址 |
+| ANTHROPIC_BASE_URL             | `http://localhost:8317/` | CLIProxyAPI 本地服务地址 |
 | ANTHROPIC_MODEL                | gpt-5.4                | 默认主模型               |
 | ANTHROPIC_DEFAULT_HAIKU_MODEL  | gpt-5.4-mini           | 轻量级任务模型           |
 | ANTHROPIC_DEFAULT_OPUS_MODEL   | gpt-5.4                | 复杂推理模型（可选）     |
