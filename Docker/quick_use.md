@@ -1,6 +1,6 @@
 # Docker的快速上手
 
-## 一、基础示例
+## 1. 基础示例
 
 ```bash
 # 拉取镜像
@@ -39,7 +39,7 @@ firewall-cmd --reload
 
 
 
-## 二、镜像
+## 2. 镜像
 
 ```bash
 # 拉取镜像  不指定tag，默认是latest
@@ -58,7 +58,7 @@ docker rmi image_id
 
 
 
-## 三、容器
+## 3. 容器
 
 ### 3.1 容器基础操作
 
@@ -165,6 +165,75 @@ CONTAINER ID   IMAGE       COMMAND                   CREATED         STATUS     
 ```
 
 得知：上面的环境变量必须设置其中1个
+
+
+
+### 3.3 目录映射
+
+#### 3.3.1 绑定挂载
+
+```bash
+# 绑定挂载 如果宿主机./mysqldata目录不存在 会自动创建
+docker run -d --name mysql -p 3306:3306 -v ./mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+
+
+# 坑： 如果宿主机abc.txt文件不存在
+# 宿主机创建的是abc.txt目录， 容器内也创建的是abc.txt目录
+docker run -d --name mysql -p 3307:3306 -v ./abc.txt:/abc.txt -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+
+# 重要：如果要映射文件，那么宿主机的文件必须存在
+[root@localhost ~]# touch xxx.txt
+[root@localhost ~]# docker run -d --name mysql2 -p 3309:3306 -v ./xxx.txt:/xxx.txt -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+```
+
+注意：使用vi、vim修改文件，很可能不会同步
+
+
+
+### 3.3.2 数据卷
+
+```bash
+# 创建名为 mysql_data 的数据卷
+# 会在 /var/lib/docker/volumes 目录下创建一个mysql_data 目录
+docker volume create mysql_data
+
+# 查看所有数据卷
+docker volume ls
+
+# 查看数据卷的详情
+[root@localhost volumes]# docker volume inspect mysql_data
+[
+    {
+        "CreatedAt": "2026-04-20T12:10:27+08:00",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/mysql_data/_data",
+        "Name": "mysql_data",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+# 删除数据卷 (需要先解绑所有容器)
+docker volume rm mysql_data
+
+# 删除“未被任何容器使用的匿名数据卷” （命名数据卷和正在被某个容器使用的卷不会被删除）
+docker volume prune
+# 连同未使用的命名卷也一起清理
+docker volume prune -a
+
+
+```
+
+使用数据卷的方式进行目录映射：
+
+```bash
+docker run -d --name mysql -p 3307:3306 -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql:5.7
+```
+
+
+
+
 
 
 

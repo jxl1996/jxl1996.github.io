@@ -81,14 +81,7 @@ export default defineConfig({
                     ]
                 }
             ],
-            // '/UniApp/': [
-            //     {
-            //         text: "UniApp",
-            //         items: [
-            //             {text: 'UniApp中对pinia数据持久化', link: '/UniApp/pinia-plugin-persistedstate.md'},
-            //         ]
-            //     }
-            // ],
+
             '/VPS/': [
                 {
                     text: "VPS",
@@ -148,9 +141,5 @@ export default defineConfig({
                 ]
             }
         },
-
-        // socialLinks: [
-        //   { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-        // ]
     }
 })
