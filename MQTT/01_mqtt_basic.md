@@ -133,6 +133,10 @@ sudo systemctl restart docker
 
 
 ```shell
+# 拉取emqx企业版镜像
+docker pull emqx/emqx-enterprise:5.6.1
+
+# 创建并运行容器
 docker run -d --name emqx-enterprise \
   -p 1883:1883 -p 8083:8083 \
   -p 8084:8084 -p 8883:8883 \
