@@ -233,7 +233,127 @@ docker run -d --name mysql -p 3307:3306 -v mysql_data:/var/lib/mysql -e MYSQL_RO
 
 
 
+## 4. 镜像构建
 
+### 4.1 快速使用
 
+一个简单go web项目的Dockerfile:
 
+```dockerfile
+# 构建阶段
+FROM golang:1.25-alpine AS builder
+
+WORKDIR /app
+
+COPY . .
+
+RUN go build -o server .
+
+# 运行阶段
+FROM alpine:3.20
+
+WORKDIR /app
+
+COPY --from=builder /app/server .
+
+EXPOSE 8080
+
+CMD ["./server"]
+```
+
+使用上面的Dockerfile构建镜像：
+
+```bash
+docker pull alpine:3.20
+docker pull golang:1.25-alpine
+docker build -t web:v1 .
+```
+
+构建成功以后会生成一个镜像：
+
+```bash
+[root@localhost awesomeProject]# docker images
+REPOSITORY   TAG           IMAGE ID       CREATED          SIZE
+web          v1            62fbaafea023   17 seconds ago   15.9MB
+...
+```
+
+使用这个镜像创建并启动容器：
+
+```bash
+[root@localhost awesomeProject]# docker run -d -p 8080:8080 web:v1
+c180f95c413866d210b7d8dc98c99eb6de39ce077f57b702a2e348bc3852503a
+[root@localhost awesomeProject]# docker ps
+CONTAINER ID   IMAGE     COMMAND      CREATED         STATUS        PORTS                                       NAMES
+c180f95c4138   web:v1    "./server"   2 seconds ago   Up 1 second   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   quirky_burnell
+```
+
+### 4.2 Dockerfile
+
+```dockerfile
+# 指定基础镜像 必填，所有指令的起点
+FROM golang:1.25-alpine AS builder
+
+# 设置环境变量
+ENV CGO_ENABLED 0
+
+# 设置工作目录
+WORKDIR /app
+# 复制文件 到/app目录
+COPY . .
+
+RUN go build -o server .
+
+# 多阶段构建
+FROM alpine:3.20
+
+WORKDIR /app
+
+COPY --from=builder /app/server .
+
+# 暴露端口 仅声明，不实际映射，用于文档说明
+EXPOSE 8080
+
+# 必填 容器启动时候的执行命令，仅最后一个生效
+CMD ["./server"]
+```
+
+### 4.3 COPY和ADD
+
+将**本地文件 / 目录**复制到镜像的指定路径，核心区别：`ADD` 支持自动解压压缩包、下载 URL 文件（不推荐，建议用 `RUN wget` 替代）。
+
+```dockerfile
+# 复制本地 项目的所有文件到 到镜像的 /app 目录
+COPY .  .
+
+# ADD 自动解压本地压缩包到镜像（如 tar.gz、zip）
+ADD .  /app/
+```
+
+### 4.4 RUN、CMD和ENTRYPOINT
+
+run：在**镜像构建过程中**执行命令（如安装依赖、解压文件、创建目录），执行结果会被固化到镜像的分层中。
+
+两种格式
+
+```dockerfile
+# Shell 格式：安装 nginx（合并命令减少镜像分层）
+RUN apt update && apt install -y nginx && rm -rf /var/lib/apt/lists/*
+
+# Exec 格式：创建目录（无 Shell 环境，不支持变量替换）
+RUN ["mkdir", "-p", "/app/logs"]
+```
+
+cmd：默认启动命令，可被 `docker run` 后面的参数覆盖；
+
+ENTRYPOINT：入口命令，`docker run` 后面的参数会作为其参数追加，不可覆盖（除非用 `--entrypoint` 参数强制替换）。
+
+```dockerfile
+# ENTRYPOINT：固定启动命令
+ENTRYPOINT ["./main"]
+
+# CMD：默认启动参数
+# 这里默认指定 --env=dev 和 --port=8080，运行时可替换
+CMD ["--env", "dev", "--port", "8080"]
+```
 
