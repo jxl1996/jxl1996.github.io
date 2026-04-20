@@ -173,7 +173,7 @@ EMQX 提供了一个内置的管理控制台，即 EMQX Dashboard。方便用户
 
 **首次访问：**
 
-访问地址：http://localhost:18083/
+访问地址：`http://localhost:18083/`
 
 用户名和密码：`admin/pubic`
 
