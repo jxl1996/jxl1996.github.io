@@ -187,6 +187,18 @@ EMQX 提供了一个内置的管理控制台，即 EMQX Dashboard。方便用户
 ./bin/emqx ctl admins passwd <Username> <Password>
 ```
 
+示例：
+
+```bash
+[root@localhost awesomeProject]# docker exec -it emqx-enterprise /bin/bash
+emqx@346a4150d0fb:/opt/emqx$ ./bin/emqx ctl admins passwd admin mypwd12345
+ok
+emqx@346a4150d0fb:/opt/emqx$ exit
+exit
+```
+
+
+
 ## 2.4 EMQX客户端
 
 ### 2.4.1 MQTTX简介
