@@ -250,7 +250,7 @@ MQTTX 包含三种类型的工具：
 2、建立链接订阅主题
 
 ```shell
-mqttx-cli-win-x64.exe sub -t 'test/1' -h 192.168.136.147 -p 1883  -v
+mqttx-cli-win-x64.exe sub -t "b" -h 192.168.136.147 -p 1883  -v
 ```
 
 `-t`：订阅主题
@@ -264,7 +264,7 @@ mqttx-cli-win-x64.exe sub -t 'test/1' -h 192.168.136.147 -p 1883  -v
 3、向主题发送消息
 
 ```shell
-mqttx-cli-win-x64.exe pub -t 'test/1' -q 0 -h 192.168.136.147 -p 1883 -m "from MQTTX CLI"
+mqttx-cli-win-x64.exe pub -t "b" -q 0 -h 192.168.136.147 -p 1883 -m "from MQTTX CLI"
 ```
 
 ### 2.2.4 MQTTX Web的使用
