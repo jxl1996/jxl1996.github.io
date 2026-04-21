@@ -249,7 +249,7 @@ MQTTX 包含三种类型的工具：
 
 2、建立链接订阅主题
 
-```sell
+```shell
 mqttx-cli-win-x64.exe sub -t 'test/1' -h 192.168.136.147 -p 1883  -v
 ```
 

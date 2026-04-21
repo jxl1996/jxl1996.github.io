@@ -30,6 +30,9 @@ features:
   - title: Git
     link: /Git/github-ssh.md
 
+  - title: Linux
+    link: /Linux/centos7_static_ip.md
+
   - title: 前端
     link: /Frontend/debounce-throttle.md
 
@@ -47,4 +50,6 @@ features:
 
   - title: MQTT
     link: /MQTT/01_mqtt_basic.md
+
+
 ---
