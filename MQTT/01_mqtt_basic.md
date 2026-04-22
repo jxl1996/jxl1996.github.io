@@ -364,6 +364,8 @@ MQTT 目前定义了 15 种控制报文类型，如果按照功能进行分类�
 
 接下来我们通过**Wireshark**工具，抓取一下各种通讯操作所涉及到的报文。
 
+下载地址：https://www.wireshark.org/download.html
+
 **链接相关报文验证:**
 
 ![image-20240529163032511](assets/image-20240529163032511.png) 
