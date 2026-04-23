@@ -39,8 +39,8 @@ features:
   - title: Golang
     link: /Golang/Gorm-Unique-Constraint.md
 
-  - title: Claude
-    link: /Claude/claudecode-install.md
+  - title: Vibe Coding
+    link: /VibeCoding/claudecode-install.md
 
   - title: ElasticSearch
     link: /ElasticSearch/es_install.md

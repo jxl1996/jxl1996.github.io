@@ -115,12 +115,12 @@ export default defineConfig({
                     ]
                 }
             ],
-            "/Claude/": [
+            "/VibeCoding/": [
                 {
-                    text: "Claude",
+                    text: "Vibe Coding",
                     items: [
-                        {text: 'Claude Code安装', link: '/Claude/claudecode-install.md'},
-                        {text: 'CLIProxyAPI', link: '/Claude/cliproxyapi.md'},
+                        {text: 'Claude Code安装', link: '/VibeCoding/claudecode-install.md'},
+                        {text: 'CLIProxyAPI', link: '/VibeCoding/cliproxyapi.md'},
                     ]
                 }
             ],
