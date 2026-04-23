@@ -52,9 +52,7 @@ QoS 0 是最低的 QoS 等级。**QoS 0 消息即发即弃，不需要等待确�
 
 ![image-20240530115618361](assets/image-20240530115618361.png) 
 
-QoS 1需要在 PUBLISH 报文中设置 Packet ID，而作为响应的 PUBACK 报文，则会使用与 PUBLISH 报文相同的 Packet ID，以便发送方收到后删除正确PUBLISH 
-
-报文缓存。
+QoS 1需要在 PUBLISH 报文中设置 Packet ID，而作为响应的 PUBACK 报文，则会使用与 PUBLISH 报文相同的 Packet ID，以便发送方收到后删除正确PUBLISH 报文缓存。
 
 
 
