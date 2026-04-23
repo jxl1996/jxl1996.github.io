@@ -251,6 +251,8 @@ $SYS/brokers/emqx@172.17.0.4/clients/+/disconnected				# 订阅客户端下线�
 
 ![image-20240531111647169](assets/image-20240531111647169.png) 
 
+<br/>
+
 # 3 会话介绍
 
 ## 3.1 MQTT会话
