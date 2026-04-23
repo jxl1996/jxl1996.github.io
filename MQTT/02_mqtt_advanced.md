@@ -116,9 +116,7 @@ QoS 2 解决了 QoS 0、1 消息可能丢失或者重复的问题，但相应地
 
 ![image-20240530153941189](assets/image-20240530153941189.png) 
 
-**QoS 2 规定，发送方只有在收到 PUBREC 报文之前可以重传 PUBLISH 报文。一旦收到 PUBREC 报文并发出 PUBREL  报文，发送方就进入了 Packet ID 释放流**
-
-**程，不可以再使用当前 Packet ID 重传 PUBLISH 报文。同时，在收到对端回复的 PUBCOMP 报文确认双方都完成 Packet ID 释放之前，也不可以使用当前 Packet ID 发送新的消息。**
+**QoS 2 规定，发送方只有在收到 PUBREC 报文之前可以重传 PUBLISH 报文。一旦收到 PUBREC 报文并发出 PUBREL  报文，发送方就进入了 Packet ID 释放流程，不可以再使用当前 Packet ID 重传 PUBLISH 报文。同时，在收到对端回复的 PUBCOMP 报文确认双方都完成 Packet ID 释放之前，也不可以使用当前 Packet ID 发送新的消息。**
 
 ![image-20240530154057335](assets/image-20240530154057335.png) 
 
