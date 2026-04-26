@@ -100,6 +100,39 @@ mysql:8.0.30
 # 导入资料中的mqtt_user.sql脚本
 ```
 
+> [!NOTE]
+>
+> 如果使用宿主机中的mysql：
+>
+> 需要给用户添加远程连接的权限
+>
+> ![image-20260426155214426](./assets/image-20260426155214426.png)
+>
+>
+> 如果使用宿主机中的postgres同理:
+>
+> postgresql.conf：
+>
+> ```
+>  listen_addresses = '*'
+> ```
+>
+> pg_hba.conf:
+>
+> ```
+> host    all             all             192.168.1.0/24          scram-sha-256
+> ```
+>
+> 重新加载配置：
+>
+> ```
+> SELECT pg_reload_conf();
+> ```
+>
+> 
+
+
+
 > HTTP Server
 
 选择使用 HTTP 服务的话，需要配置请求该 HTTP 服务的请求方式，POST 或 GET 方法。请求地址 URL，注意 URL  内需要填写协议是 http 或 https，如果有端
