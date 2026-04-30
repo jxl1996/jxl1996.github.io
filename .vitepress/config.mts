@@ -51,7 +51,7 @@ export default defineConfig({
                     text: 'PostgreSQL',
                     items: [
                         {text: 'pgsql20260208', link: '/PostgreSQL/pgsql20260208.md'},
-                        {text: 'demo1', link: '/PostgreSQL/demo1.md'}
+                        {text: 'PostGIS', link: '/PostgreSQL/PostGIS.md'}
                     ]
                 }
             ],
