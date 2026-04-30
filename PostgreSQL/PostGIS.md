@@ -624,5 +624,199 @@ offset    分页偏移
 
 
 
+## 15. 在GORM中的使用
 
+### 15.1 定义自定义类型
+
+```go
+package pgtypes
+
+import (
+	"context"
+
+	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
+	"gorm.io/gorm/schema"
+)
+
+type GeoPoint struct {
+	Lng float64
+	Lat float64
+}
+
+// GORM 通用数据类型
+func (GeoPoint) GormDataType() string {
+	return "geography"
+}
+
+// PostgreSQL 中实际字段类型
+func (GeoPoint) GormDBDataType(db *gorm.DB, field *schema.Field) string {
+	return "geography(Point,4326)"
+}
+
+// 插入 / 更新时，自动转换成 PostGIS 点
+func (p GeoPoint) GormValue(ctx context.Context, db *gorm.DB) clause.Expr {
+	return clause.Expr{
+		SQL:  "ST_SetSRID(ST_MakePoint(?, ?), 4326)::geography",
+		Vars: []interface{}{p.Lng, p.Lat},
+	}
+}
+
+// 查询时可以忽略 location，因为我们通常用 lng、lat 给前端展示
+func (p *GeoPoint) Scan(value interface{}) error {
+	return nil
+}
+
+```
+
+### 15.2 定义门店模型
+
+```go
+package models
+
+import (
+	"gorm_pgsql/pgtypes"
+	"time"
+
+	"gorm.io/gorm"
+)
+
+type Shop struct {
+	ID uint64 `gorm:"primaryKey" json:"id"`
+
+	Name     string `gorm:"size:100;not null" json:"name"`
+	Category string `gorm:"size:50;not null;index" json:"category"`
+	Address  string `gorm:"size:255" json:"address"`
+
+	Lng float64 `gorm:"type:double precision;not null" json:"lng"`
+	Lat float64 `gorm:"type:double precision;not null" json:"lat"`
+
+	// PostGIS 字段，不直接返回给前端
+	Location pgtypes.GeoPoint `gorm:"column:location;type:geography(Point,4326);not null" json:"-"`
+
+	Status int16 `gorm:"not null;default:1;index" json:"status"`
+
+	CreatedAt time.Time `json:"created_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+}
+
+func (Shop) TableName() string {
+	return "shops"
+}
+
+// 保存前自动同步 location
+func (s *Shop) BeforeSave(tx *gorm.DB) error {
+	s.Location = pgtypes.GeoPoint{
+		Lng: s.Lng,
+		Lat: s.Lat,
+	}
+	return nil
+}
+
+```
+
+### 15.3 基础使用
+
+```go
+package main
+
+import (
+	"fmt"
+	"gorm_pgsql/models"
+	"log"
+
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+)
+
+func main() {
+	db := InitDB()
+	// 创建门店
+	if err := CreateShop(db); err != nil {
+		log.Fatal(err)
+	}
+
+	// 批量创建门店
+	if err := SeedShops(db); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func InitDB() *gorm.DB {
+	dsn := "host=localhost user=postgres password=123456 dbname=mydb port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	if err != nil {
+		log.Fatal("连接数据库失败:", err)
+	}
+
+	// 启用 PostGIS
+	if err := db.Exec(`CREATE EXTENSION IF NOT EXISTS postgis`).Error; err != nil {
+		log.Fatal("启用 PostGIS 失败:", err)
+	}
+
+	// 自动迁移表结构
+	if err := db.AutoMigrate(&models.Shop{}); err != nil {
+		log.Fatal("迁移失败:", err)
+	}
+
+	// 创建空间索引
+	if err := db.Exec(`
+		CREATE INDEX IF NOT EXISTS idx_shops_location_gist
+		ON shops
+		USING GIST (location)
+	`).Error; err != nil {
+		log.Fatal("创建空间索引失败:", err)
+	}
+
+	fmt.Println("数据库初始化完成")
+	return db
+}
+
+// 创建门店
+func CreateShop(db *gorm.DB) error {
+	shop := models.Shop{
+		Name:     "天安门咖啡店",
+		Category: "coffee",
+		Address:  "北京市东城区天安门附近",
+		Lng:      116.397128,
+		Lat:      39.916527,
+		Status:   1,
+	}
+
+	return db.Create(&shop).Error
+}
+
+func SeedShops(db *gorm.DB) error {
+	shops := []models.Shop{
+		{
+			Name:     "王府井奶茶店",
+			Category: "milk_tea",
+			Address:  "北京市东城区王府井",
+			Lng:      116.411376,
+			Lat:      39.909652,
+			Status:   1,
+		},
+		{
+			Name:     "西单便利店",
+			Category: "store",
+			Address:  "北京市西城区西单",
+			Lng:      116.374072,
+			Lat:      39.907422,
+			Status:   1,
+		},
+		{
+			Name:     "三里屯酒吧",
+			Category: "bar",
+			Address:  "北京市朝阳区三里屯",
+			Lng:      116.454089,
+			Lat:      39.933626,
+			Status:   1,
+		},
+	}
+
+	return db.Create(&shops).Error
+}
+
+```
 
