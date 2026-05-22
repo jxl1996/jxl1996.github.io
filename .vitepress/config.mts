@@ -70,6 +70,7 @@ export default defineConfig({
                         {text: '秒杀系统设计', link: '/Interview/秒杀系统设计.md'},
                         {text: '交替打印奇偶数', link: '/Interview/交替打印奇偶数.md'},
                         {text: '参会的策略', link: '/Interview/参会的策略.md'},
+                        {text: '准备生日礼物', link: '/Interview/Count-Birthday-Gifts.md'},
                     ]
                 }
             ],
