@@ -64,6 +64,7 @@ export default defineConfig({
                         {text: 'Mysql', link: '/Interview/Mysql-Interview.md'},
                         {text: 'Git', link: '/Interview/Git-Interview.md'},
                         {text: 'Linux', link: '/Interview/Linux-Interview.md'},
+                        {text: '前端', link: '/Interview/Frontend-Interview.md'},
                         {text: '奇安Golang方向试卷1', link: '/Interview/奇安Golang方向试卷1.md'},
                         {text: '奇安Golang方向试卷2', link: '/Interview/奇安Golang方向试卷2.md'},
                         {text: '手撕协程池', link: '/Interview/手撕协程池.md'},
