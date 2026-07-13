@@ -159,6 +159,13 @@ export default defineConfig({
                     {text: 'MQTT Dashboard', link: '/MQTT/03_mqtt_dashboard.md'},
                     {text: 'MQTT使用案例', link: '/MQTT/04_mqtt_case.md'},
                 ]
+            },
+
+            "/React/":{
+                text: "React",
+                items: [
+                    {text: 'React入门', link: '/React/React20260713.md'},
+                ]
             }
         },
     }
