@@ -164,7 +164,15 @@ export default defineConfig({
             "/React/":{
                 text: "React",
                 items: [
-                    {text: 'React入门', link: '/React/React20260713.md'},
+                    {text: 'React20260713', link: '/React/React20260713.md'},
+                ]
+            },
+
+            "/RabbitMQ/":{
+                text: "RabbitMQ",
+                items: [
+                    {text: 'Windows安装RabbitMQ', link: '/RabbitMQ/windows_install.md'},
+                    {text: 'rabbitmq20260713', link: '/RabbitMQ/rabbitmq20260713.md'},
                 ]
             }
         },

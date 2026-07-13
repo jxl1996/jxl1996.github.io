@@ -54,5 +54,7 @@ features:
   - title: React
     link: /React/React20260713.md
 
+  - title: RabbitMQ
+    link: /RabbitMQ/windows_install.md
 
 ---
