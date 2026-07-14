@@ -172,7 +172,7 @@ export default defineConfig({
                 text: "RabbitMQ",
                 items: [
                     {text: 'Windows安装RabbitMQ', link: '/RabbitMQ/windows_install.md'},
-                    {text: 'rabbitmq20260713', link: '/RabbitMQ/rabbitmq20260713.md'},
+                    {text: '简单模式代码', link: '/RabbitMQ/simple_mode_code.md'},
                 ]
             }
         },
