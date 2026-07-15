@@ -164,7 +164,8 @@ export default defineConfig({
             "/React/":{
                 text: "React",
                 items: [
-                    {text: 'React20260713', link: '/React/React20260713.md'},
+                    {text: '创建React项目', link: '/React/create_react.md'},
+                    {text: 'props与state组件通信', link: '/React/props_state.md'},
                 ]
             },
 
