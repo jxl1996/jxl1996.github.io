@@ -168,6 +168,7 @@ export default defineConfig({
                     {text: 'props与state组件通信', link: '/React/props_state.md'},
                     {text: 'useState状态管理', link: '/React/useState.md'},
                     {text: '条件渲染与列表渲染', link: '/React/condition_list_render.md'},
+                    {text: 'useEffect副作用', link: '/React/useEffect.md'},
                 ]
             },
 
