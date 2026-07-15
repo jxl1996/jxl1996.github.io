@@ -166,6 +166,7 @@ export default defineConfig({
                 items: [
                     {text: '创建React项目', link: '/React/create_react.md'},
                     {text: 'props与state组件通信', link: '/React/props_state.md'},
+                    {text: 'useState状态管理', link: '/React/useState.md'},
                 ]
             },
 
