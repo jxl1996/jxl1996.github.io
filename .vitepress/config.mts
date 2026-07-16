@@ -172,6 +172,7 @@ export default defineConfig({
                     {text: 'useRef', link: '/React/useRef.md'},
                     {text: 'useActionState和useFormStatus', link: '/React/useActionState_useFormStatus.md'},
                     {text: 'Suspense和use', link: '/React/Suspense_use.md'},
+                    {text: 'useState和useReducer', link: '/React/useState_useReducer.md'},
                 ]
             },
 
