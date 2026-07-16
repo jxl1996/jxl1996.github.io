@@ -170,6 +170,7 @@ export default defineConfig({
                     {text: '条件渲染与列表渲染', link: '/React/condition_list_render.md'},
                     {text: 'useEffect副作用', link: '/React/useEffect.md'},
                     {text: 'useRef', link: '/React/useRef.md'},
+                    {text: 'useActionState和useFormStatus', link: '/React/useActionState_useFormStatus.md'},
                 ]
             },
 
