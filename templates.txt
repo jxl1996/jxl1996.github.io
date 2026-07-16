@@ -22,6 +22,21 @@ h1 {
   color: #3eaf7c;
 }
 ```
+
+```js
+<div class="container">
+  <h1>Hello VitePress</h1>
+  <p>这是一个代码组示例。</p>
+</div>
+```
+
+```js
+<div class="container">
+  <h1>Hello VitePress</h1>
+  <p>这是一个代码组示例。</p>
+</div>
+```
+
 :::
 
 ---1
