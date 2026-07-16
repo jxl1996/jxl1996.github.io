@@ -149,4 +149,31 @@ export const GrandChild = () => {
 
 
 
-## 
+## 二、useContext最佳实践写法
+
+::: code-group
+
+```ts[useTheme.ts]
+import {useContext} from "react";
+import {ThemeContext} from "./ThemeContext.tsx";
+
+export const useTheme = () => {
+    const {theme} = useContext(ThemeContext)
+    return theme
+}
+```
+
+```tsx[GrandChild.tsx]
+import {useTheme} from "./useTheme.ts";
+
+export const GrandChild = () => {
+    const theme = useTheme();
+    return (
+        <div>
+            <h4>GrandChild组件 - {theme}</h4>
+        </div>
+    )
+}
+```
+
+:::
