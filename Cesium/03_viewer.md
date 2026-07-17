@@ -73,4 +73,46 @@ onMounted(() => {
 
 
 
-## 
+## 二、Cesium天空盒
+
+```vue
+<template>
+<div id="cesiumContainer" ></div>
+</template>
+
+<script setup>
+import * as Cesium from "cesium";
+import '@/CesiumWidgets/widgets.css'
+import {onMounted} from "vue";
+
+// 设置cesium静态资源的路径, 对应public下的路径
+window.CESIUM_BASE_URL = '/plugins/cesium/'
+
+// 设置cesium token
+Cesium.Ion.defaultAccessToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyOTdmM2QyNi04OTcwLTQ5MTYtOTA4MS04NGY0NGYzYWY5MzEiLCJpZCI6NDU3NDA2LCJpc3MiOiJodHRwczovL2FwaS5jZXNpdW0uY29tIiwiYXVkIjoidW5kZWZpbmVkX2RlZmF1bHQiLCJpYXQiOjE3ODQyNjI0NjZ9.2r2DGNclwQcO8ajB8tH6L0rQZudoemzDxbvlRxp-QKI"
+
+
+onMounted(() => {
+  var viewer = new Cesium.Viewer("cesiumContainer",{
+    skyBox:new Cesium.SkyBox({
+      sources:{
+        positiveX: "texture/sky/px.bmp",
+        negativeX: "texture/sky/nx.bmp",
+        positiveY: "texture/sky/py.bmp",
+        negativeY: "texture/sky/ny.bmp",
+        positiveZ: "texture/sky/pz.bmp",
+        negativeZ: "texture/sky/nz.bmp"
+      }
+    })
+  });
+})
+
+</script>
+
+<style scoped>
+#cesiumContainer{
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+```
