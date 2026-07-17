@@ -16,7 +16,7 @@ import {onMounted} from "vue";
 window.CESIUM_BASE_URL = '/plugins/cesium/'
 
 // 设置cesium token
-Cesium.Ion.defaultAccessToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyOTdmM2QyNi04OTcwLTQ5MTYtOTA4MS04NGY0NGYzYWY5MzEiLCJpZCI6NDU3NDA2LCJpc3MiOiJodHRwczovL2FwaS5jZXNpdW0uY29tIiwiYXVkIjoidW5kZWZpbmVkX2RlZmF1bHQiLCJpYXQiOjE3ODQyNjI0NjZ9.2r2DGNclwQcO8ajB8tH6L0rQZudoemzDxbvlRxp-QKI"
+Cesium.Ion.defaultAccessToken="xxxxxxxx"
 
 // 设置默认视角 设置视角默认为中国
 Cesium.Camera.DEFAULT_VIEW_RECTANGLE = Cesium.Rectangle.fromDegrees(

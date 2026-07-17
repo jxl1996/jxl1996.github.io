@@ -33,7 +33,7 @@ dayjs.locale('zh-cn'); // 全局使用中文
 // 设置cesium静态资源的路径, 对应public下的路径
 window.CESIUM_BASE_URL = '/plugins/cesium/'
 // 设置cesium token
-Cesium.Ion.defaultAccessToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyOTdmM2QyNi04OTcwLTQ5MTYtOTA4MS04NGY0NGYzYWY5MzEiLCJpZCI6NDU3NDA2LCJpc3MiOiJodHRwczovL2FwaS5jZXNpdW0uY29tIiwiYXVkIjoidW5kZWZpbmVkX2RlZmF1bHQiLCJpYXQiOjE3ODQyNjI0NjZ9.2r2DGNclwQcO8ajB8tH6L0rQZudoemzDxbvlRxp-QKI"
+Cesium.Ion.defaultAccessToken="xxxxxxxxxxx"
 
 onMounted(() => {
   const viewer = new Cesium.Viewer("cesiumContainer");
