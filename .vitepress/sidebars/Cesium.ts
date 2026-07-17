@@ -6,5 +6,6 @@ export default {
         {text: 'Viewer查看器', link: '/Cesium/03_viewer.md'},
         {text: '修改时间格式', link: '/Cesium/04_animation_timeline.md'},
         {text: '自定义地图与地图叠加', link: '/Cesium/05_custom_map.md'},
+        {text: '地形设置', link: '/Cesium/06_terrains.md'},
     ]
 }
