@@ -175,6 +175,7 @@ export default defineConfig({
                     {text: 'useState和useReducer', link: '/React/useState_useReducer.md'},
                     {text: '深层状态传递', link: '/React/context.md'},
                     {text: 'useMemo和useCallback', link: '/React/useMemo_useCallback.md'},
+                    {text: '自定义hooks', link: '/React/custom_hooks.md'},
                 ]
             },
 
