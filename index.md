@@ -53,6 +53,9 @@ features:
     
   - title: React
     link: /React/create_react.md
+    
+  - title: Cesium
+    link: /Cesium/01_first_project.md
 
   - title: RabbitMQ
     link: /RabbitMQ/windows_install.md
