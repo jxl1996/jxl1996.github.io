@@ -6,6 +6,16 @@
 
 下面是实现将左下角时钟和底部时间轴设置为本地时间（如北京时间）的完整解决方案：
 
+使用`day.js`来进行格式化时间：
+
+安装day.js：
+
+```cmd
+npm i dayjs
+```
+
+实现代码：
+
 ```vue
 <template>
 <div id="cesiumContainer" ></div>
