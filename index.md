@@ -24,8 +24,7 @@ features:
   - title: 排序算法
     link: /SortAlgorithm/01_bubble_sort.md
 
-  - title: VPS
-    link: /VPS/vps_build.md
+
 
   - title: Git
     link: /Git/github-ssh.md
@@ -59,5 +58,8 @@ features:
 
   - title: RabbitMQ
     link: /RabbitMQ/windows_install.md
+
+  - title: VPS
+    link: /VPS/vps_build.md
 
 ---
