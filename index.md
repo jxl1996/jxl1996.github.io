@@ -62,4 +62,6 @@ features:
   - title: VPS
     link: /VPS/vps_build.md
 
+  - title: Figma
+    link: /Figma/01_appearance_learn.md
 ---
