@@ -13,6 +13,7 @@ import MQTT from "./MQTT";
 import React from './React'
 import RabbitMQ from "./RabbitMQ";
 import Cesium from "./Cesium";
+import Figma from "./Figma";
 
 export default {
     "/PostgreSQL/": PostgreSQL,
@@ -30,4 +31,5 @@ export default {
     "/React/": React,
     "/RabbitMQ/": RabbitMQ,
     "/Cesium/": Cesium,
+    "/Figma/": Figma,
 }
