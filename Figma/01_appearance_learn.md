@@ -79,3 +79,38 @@
 
 快捷键： Shift + R
 
+### 4.3 Pixel preview
+
+![image-20260808121331153](./assets/image-20260808121331153.png)
+
+Figma 的 **Pixel Preview（像素预览）**，主要是用来查看设计在真实屏幕像素下会不会出现**模糊、半像素、边缘不清晰**的问题。
+
+普通编辑模式下，Figma 使用矢量方式渲染，所以你把图形放在 `x=10.5px`、宽度设成 `100.5px`，看起来可能依然很平滑。但实际导出 PNG，或者最终显示到屏幕上时，某些边缘可能落在两个物理像素之间，于是就会出现发虚。
+
+快捷键： Ctrl + Shift + P
+
+### 4.4 Minimize UI
+
+![image-20260808121737348](./assets/image-20260808121737348.png)
+
+作用：最小化UI菜单
+
+快捷键： Ctrl + Shift + \
+
+### 4.5 Show/Hide UI
+
+![image-20260808121952371](./assets/image-20260808121952371.png)
+
+作用：显示或隐藏UI
+
+快捷键：Ctrl + \
+
+---
+
+## 五、Arrange
+
+### 5.1 Round to pixel
+
+![image-20260808123010304](./assets/image-20260808123010304.png)
+
+**Round to pixel 主要处理的是图层的 Position（X / Y）**，也就是让图层的位置落到整数像素坐标上
