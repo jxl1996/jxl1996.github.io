@@ -114,3 +114,36 @@ Figma 的 **Pixel Preview（像素预览）**，主要是用来查看设计在�
 ![image-20260808123010304](./assets/image-20260808123010304.png)
 
 **Round to pixel 主要处理的是图层的 Position（X / Y）**，也就是让图层的位置落到整数像素坐标上
+
+## 六、Preferences
+
+![image-20260808131635002](./assets/image-20260808131635002.png)
+
+### 6.1 Snap to geometry
+
+作用：对齐到几何，对齐吸附效果
+
+![image-20260808131815999](./assets/image-20260808131815999.png)
+
+### 6.2 Snap to objects
+
+![image-20260808132055837](./assets/image-20260808132055837.png)
+
+作用: 对齐到对象，对齐吸附效果
+
+![image-20260808132155744](./assets/image-20260808132155744.png)
+
+### 6.3 Snap to pixel grid
+
+![image-20260808132601770](./assets/image-20260808132601770.png)
+
+作用：对齐到像素网格， 拖动和绘制的时候都会对齐到像素网格
+
+> [!TIP]
+>
+> 建议这三项都保持开启：
+>
+> + Snap to geometry
+> + Snap to objects
+> + Snap to pixel grid
+
