@@ -6,5 +6,6 @@ export default {
         {text: '形状属性参数', link: '/Figma/03_shape_attribute_parameters.md'},
         {text: '布尔运算', link: '/Figma/04_boolean_operation.md'},
         {text: '形状编辑和钢笔工具', link: '/Figma/05_shape_editing_and_pen_tool.md'},
+        {text: '组/画框/蒙版', link: '/Figma/06_group_frame_mask.md'},
     ]
 }
