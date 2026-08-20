@@ -7,5 +7,6 @@ export default {
         {text: '布尔运算', link: '/Figma/04_boolean_operation.md'},
         {text: '形状编辑和钢笔工具', link: '/Figma/05_shape_editing_and_pen_tool.md'},
         {text: '组/画框/蒙版', link: '/Figma/06_group_frame_mask.md'},
+        {text: '线性图标设计', link: '/Figma/07_linear_icon_design.md'},
     ]
 }
