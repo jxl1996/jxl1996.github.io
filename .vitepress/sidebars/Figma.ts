@@ -10,5 +10,6 @@ export default {
         {text: '线性图标设计', link: '/Figma/07_linear_icon_design.md'},
         {text: '效果', link: '/Figma/08_effect.md'},
         {text: '天气图标绘制', link: '/Figma/09_weather_icon.md'},
+        {text: '文本', link: '/Figma/10_text.md'},
     ]
 }
