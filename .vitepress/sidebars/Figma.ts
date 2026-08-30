@@ -9,5 +9,6 @@ export default {
         {text: '组/画框/蒙版', link: '/Figma/06_group_frame_mask.md'},
         {text: '线性图标设计', link: '/Figma/07_linear_icon_design.md'},
         {text: '效果', link: '/Figma/08_effect.md'},
+        {text: '天气图标绘制', link: '/Figma/09_weather_icon.md'},
     ]
 }
