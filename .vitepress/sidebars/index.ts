@@ -14,6 +14,7 @@ import React from './React'
 import RabbitMQ from "./RabbitMQ";
 import Cesium from "./Cesium";
 import Figma from "./Figma";
+import Skills from "./Skills";
 
 export default {
     "/PostgreSQL/": PostgreSQL,
@@ -24,6 +25,7 @@ export default {
     "/Frontend/": Frontend,
     "/Golang/": Golang,
     "/VibeCoding/": VibeCoding,
+    "/Skills/": Skills,
     "/ElasticSearch/": ElasticSearch,
     "/Docker/": Docker,
     "/Linux/": Linux,

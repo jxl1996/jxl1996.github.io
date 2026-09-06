@@ -41,6 +41,9 @@ features:
   - title: Vibe Coding
     link: /VibeCoding/claudecode-install.md
 
+  - title: Skills
+    link: /Skills/web-design-guidelines.md
+
   - title: ElasticSearch
     link: /ElasticSearch/es_install.md
 
