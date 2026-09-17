@@ -15,6 +15,7 @@ import RabbitMQ from "./RabbitMQ";
 import Cesium from "./Cesium";
 import Figma from "./Figma";
 import Skills from "./Skills";
+import Flutter from "./Flutter";
 
 export default {
     "/PostgreSQL/": PostgreSQL,
@@ -34,4 +35,5 @@ export default {
     "/RabbitMQ/": RabbitMQ,
     "/Cesium/": Cesium,
     "/Figma/": Figma,
+    "/Flutter/": Flutter,
 }
