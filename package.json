@@ -2,9 +2,11 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "typescript": "^5.9.3",
     "vitepress": "^2.0.0-alpha.16"
   },
   "dependencies": {
