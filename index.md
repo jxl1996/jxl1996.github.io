@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Siriabc"
   text: "日积月累"
-  tagline: "代码、原理与踩坑记录"
+  tagline: "代码、原理与踩坑记录."
 #  actions:
 #    - theme: brand
 #      text: Markdown Examples
