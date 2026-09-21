@@ -6,6 +6,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "^24.13.6",
     "typescript": "^5.9.3",
     "vitepress": "^2.0.0-alpha.16"
   },

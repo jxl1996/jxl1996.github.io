@@ -1,16 +1,16 @@
 import {defineConfig} from 'vitepress'
 import {loadEnv} from 'vite'
-import sidebars from "./sidebars";
+import sidebars from './sidebars'
 
-export default defineConfig(({mode}) => {
-    const env = loadEnv(mode, process.cwd(), '')
+const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
+const env = loadEnv(mode, process.cwd(), '')
 
-    if (!env.VITE_DOCS_PASSWORD_HASH) {
-        throw new Error('缺少 VITE_DOCS_PASSWORD_HASH，已停止构建以避免站点意外公开。')
-    }
+if (!env.VITE_DOCS_PASSWORD_HASH) {
+    throw new Error('缺少 VITE_DOCS_PASSWORD_HASH，已停止构建以避免站点意外公开。')
+}
 
-    return {
-
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
     head: [
         ['meta', {name: 'algolia-site-verification', content: 'BC07CB2534C4E288'}],
     ],
@@ -55,6 +55,5 @@ export default defineConfig(({mode}) => {
         // 方式1: sidebar可以是一个数组
         // 方式2: sidebar是一个对象, 然后对象的字段可以是对象或数组
         sidebar: sidebars,
-    }
     }
 })
