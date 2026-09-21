@@ -3,6 +3,7 @@ import { inBrowser, useRoute } from 'vitepress'
 import { nextTick, onMounted, watch } from 'vue'
 import mediumZoom from 'medium-zoom'
 import './custom.css'
+import AuthGate from './AuthGate.vue'
 
 let zoom: ReturnType<typeof mediumZoom> | null = null
 
@@ -21,6 +22,7 @@ function initZoom() {
 
 export default {
     extends: DefaultTheme,
+    Layout: AuthGate,
     setup() {
         const route = useRoute()
 

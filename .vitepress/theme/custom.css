@@ -115,5 +115,100 @@
     cursor: zoom-in;
 }
 
+.docs-auth-loading {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    color: var(--vp-c-text-2);
+    background: var(--vp-c-bg);
+}
+
+.docs-auth-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: var(--vp-c-bg);
+}
+
+.docs-auth-card {
+    width: min(100%, 420px);
+    padding: 40px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 16px;
+    background: var(--vp-c-bg-soft);
+    box-shadow: 0 20px 60px rgb(0 0 0 / 15%);
+}
+
+.docs-auth-kicker {
+    margin: 0 0 12px;
+    color: var(--vp-c-brand-1);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.docs-auth-card h1 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+.docs-auth-description {
+    margin: 0 0 28px;
+    color: var(--vp-c-text-2);
+    line-height: 1.6;
+}
+
+.docs-auth-card form {
+    display: grid;
+    gap: 12px;
+}
+
+.docs-auth-card label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.docs-auth-card input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 8px;
+    color: var(--vp-c-text-1);
+    background: var(--vp-c-bg);
+}
+
+.docs-auth-card button {
+    margin-top: 8px;
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    background: var(--vp-c-brand-1);
+    cursor: pointer;
+}
+
+.docs-auth-card button:disabled {
+    cursor: wait;
+    opacity: 0.6;
+}
+
+.docs-auth-error {
+    margin: 4px 0 0;
+    color: var(--vp-c-danger-1);
+    font-size: 13px;
+}
+
+.docs-auth-logout {
+    margin-left: 12px;
+    padding: 4px 8px;
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 6px;
+    color: var(--vp-c-text-2);
+    background: transparent;
+    cursor: pointer;
+}
+
 
 
