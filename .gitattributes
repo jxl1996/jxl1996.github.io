@@ -1,0 +1,6 @@
+# PDF.js 的二进制资源及上游许可证保持原样，不参与文本差异检查。
+public/pdfjs/web/cmaps/** -diff -text
+public/pdfjs/web/iccs/** -diff -text
+public/pdfjs/web/images/** -diff -text
+public/pdfjs/web/standard_fonts/** -diff -text
+public/pdfjs/web/wasm/** -diff -text

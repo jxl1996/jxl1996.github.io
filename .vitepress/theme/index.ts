@@ -1,9 +1,11 @@
 import DefaultTheme from 'vitepress/theme'
 import { inBrowser, useRoute } from 'vitepress'
+import type { Theme } from 'vitepress'
 import { nextTick, onMounted, watch } from 'vue'
 import mediumZoom from 'medium-zoom'
 import './custom.css'
 import AuthGate from './AuthGate.vue'
+import PdfViewer from './components/PdfViewer.vue'
 
 let zoom: ReturnType<typeof mediumZoom> | null = null
 
@@ -23,6 +25,9 @@ function initZoom() {
 export default {
     extends: DefaultTheme,
     Layout: AuthGate,
+    enhanceApp({app}) {
+        app.component('PdfViewer', PdfViewer)
+    },
     setup() {
         const route = useRoute()
 
@@ -37,4 +42,4 @@ export default {
             }
         )
     }
-}
+} satisfies Theme

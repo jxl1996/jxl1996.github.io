@@ -1,0 +1,10 @@
+/* 本站只提供只读阅读能力，隐藏官方阅读器中的打开文件、打印和标注入口。 */
+#secondaryOpenFile,
+#printButton,
+#secondaryPrint,
+#editorModeButtons,
+#editorModeSeparator,
+#printServiceDialog,
+#printContainer {
+    display: none !important;
+}
