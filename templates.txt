@@ -26,8 +26,3 @@ h1 {
 :::
 
 ---1
-
-
-$SYS/brokers/emqx@172.17.0.4/version
-$SYS/brokers/emqx@172.17.0.4/clients/+/connected
-$SYS/brokers/emqx@172.17.0.4/clients/+/disconnected
