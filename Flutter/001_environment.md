@@ -3,10 +3,11 @@
 环境变量配置：
 
 ```
-PATH: flutter的bin目录
+PATH: 添加flutter的bin目录
 
-PUB_HOSTED_URL:https://pub.flutter-io.cn
-FLUTTER_STORAGE_BASE_URL:https://storage.flutter-io.cn
+PUB_HOSTED_URL=https://pub.flutter-io.cn
+FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+PUB_CACHE=D:\flutter_pub_cache   #创建一个目录，并且以后的flutter项目与这个目录在同一个盘符
 ```
 
 检查环境：
