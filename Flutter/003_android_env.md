@@ -59,3 +59,18 @@ flutter doctor -v
 flutter config --jdk-dir="path/to/jdk"
 ```
 
+## 三、给安卓侧添加网络权限
+
+android/app/src/main/AndroidManifest.xml
+
+```
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+## 四、安卓端打包
+
+```
+flutter build apk --debug # 生成调试版 APK（未签名，用于测试）
+flutter build apk --release # 生成发布版 APK（需要签名配置）
+```
+
